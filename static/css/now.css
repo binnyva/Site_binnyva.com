@@ -1,0 +1,11 @@
+.project-pic {
+	width: 250px;
+	border-radius: 5%;
+}
+
+@media only screen and (min-width:1200px) {
+	.project-pic {
+		position: absolute;
+		left: 1000px;
+	}	
+}

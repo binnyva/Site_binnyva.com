@@ -16,9 +16,9 @@ eleventyNavigation:
 
 See more details about my [current projects](now)...
 
-- Learning, building and teaching [Zettelkasten System](https://notes.binnyva.com/), [Digital Garden](https://github.com/binnyva/gatsby-garden)
-- Creating [Standup Philosophy](https://standup-philosophy.netlify.app/) Content
-- Director of Technology at [Make A Difference](https://makeadiff.in/)
+- Learning, building and teaching [Zettelkasten System](https://notes.binnyva.com/), [Digital Garden](https://github.com/binnyva/gatsby-garden) 📔
+- Creating [Standup Philosophy](https://standup-philosophy.netlify.app/) Content 🎤
+- Director of Technology at [Make A Difference](https://makeadiff.in/) 
 
 ## Socials
 

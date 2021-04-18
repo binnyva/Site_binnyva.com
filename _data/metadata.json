@@ -1,0 +1,15 @@
+{
+  "title": "Binny V A",
+  "url": "https://binnyva.com/",
+  "description": "I'm a philosopher programmer who specializes in web development and stoicism.",
+  "feed": {
+    "subtitle": "I'm a philosopher programmer who specializes in web development and stoicism.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://binnyva.com/"
+  },
+  "author": {
+    "name": "Binny V A",
+    "email": "binnyva@example.com"
+  }
+}

@@ -1,0 +1,16 @@
+html, body {
+  	height: 100%;
+}
+main, #main {
+	height: 100%;
+}
+#content {
+	height: 100%;
+}
+
+@media only screen and (min-width:1200px) {
+	main.index {
+		background: url('../images/main.jpg') no-repeat bottom right;
+	    background-attachment: fixed;
+	}
+}

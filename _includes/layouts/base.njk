@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="stylesheet" href="/static/css/common.css">
+    {% if templateClass %}<link rel="stylesheet" href="/static/css/{{ templateClass }}.css">{% endif %}
+  </head>
+  <style type="text/css">
+  body, h1,h2,h3,h4,h5,h6 {font-family: "Inter", sans-serif;}
+  body { font-size: 1.25rem; }
+  .w3-row-padding img {margin-bottom: 12px}
+  .w3-sidebar {width: 120px;background: #222;}
+  #main {margin-left: 120px;}
+  {% raw %}
+  @media only screen and (max-width:600px) {#main { margin-left:0}}
+  {% endraw %}
+  </style>
+
+  <body class="w3-black">
+    
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <!-- Avatar image in top left corner -->
+      <img src="{{ '/static/images/profile.jpg' | url }}" style="width:100%">
+
+      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+      {%- for entry in collections.all | eleventyNavigation %}
+        <a href="{{ entry.url | url }}" class="w3-bar-item w3-button w3-padding-large {% if entry.url == page.url %} w3-black {% else %} w3-hover-black {% endif %}">
+          <i class="fa {{ navFA[entry.key]}} w3-xxlarge"></i>
+          <p>{{ entry.title }}</p>
+        </a>
+      {%- endfor %}
+    </nav>
+    
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+      {%- for entry in collections.all | eleventyNavigation %}
+      <a href="{{ entry.url | url }}" class="w3-bar-item w3-button" style="width:20% !important">{{ entry.title}}</a>
+      {%- endfor %}
+      </div>
+    </div>
+
+    <div class="w3-padding-large" id="main">
+      <main {% if templateClass %} class="{{ templateClass }}"{% endif %}>
+        <div id="content">
+          {{ content | safe }}
+        </div>
+      </main>
+    </div>
+
+    <!-- Current page: {{ page.url | url }} -->
+  </body>
+</html>

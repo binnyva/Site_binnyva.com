@@ -1,0 +1,64 @@
+@name=Folder Tree
+@section=Script Index
+@desc=This javascript powered index will give a Explorer style tree for a sitemap. You can see the links in a tree style. You can open or close any node in the tree, thus showing or conceling elements within it.
+
+@start_code=<html>
+<head>
+<title>%Page_Title%</title>
+<link rel="foldertree_files/stylesheet" href="ftstyle.css">
+<script src="foldertree_files/f_tree.js"></script>
+<script language="javascript">
+<!--
+USETEXTLINKS = 1;
+foldersTree = gFld("<i>Sitemap</i>", "javascript:void(null);");
+var level=1;
+
+if(level>1){
+eval('aux'+level+'=insFld(aux'+(level-1)+', gFld("","javascript:void(null);"))');
+}
+else{
+eval('aux'+level+'=insFld(foldersTree, gFld("","javascript:void(null);"))');
+}
+
+@link_code=eval('insDoc(aux'+level+', gLnk(0, "'+"%File_Name%"+'", "%Link%"))')
+@struct_in_code=level=level+1;
+@struct_out_code=level=level-1;
+@level_1_code=<H3>%Folder_Name%</H3>
+@level_2_code=<H4>%Folder_Name%</H4>
+@level_3_code=<B>%Folder_Name%</B><BR>
+@level_4_code=<I>%Folder_Name%</I><BR>
+@insert_folder=
+if(level>1){
+eval('aux'+level+'=insFld(aux'+(level-1)+', gFld("%Folder_Name%","javascript:void(null);"))');
+}
+else{
+eval('aux'+level+'=insFld(foldersTree, gFld("%Folder_Name%","javascript:void(null);"))');
+}
+@insert_folder_n=1
+@insert_file=
+@insert_file_n=
+@insert_letter=
+@end_code=
+// --></script>
+<script>
+initializeDocument()
+</script>
+</head>
+<body bgcolor=white>
+</body>
+</html>
+@files=2Script Index/files/foldertree/f_tree.js
+2Script Index/files/foldertree/ftstyle.css
+2Script Index/files/foldertree/ftv2blank.gif
+2Script Index/files/foldertree/ftv2doc.gif
+2Script Index/files/foldertree/ftv2folderclosed.gif
+2Script Index/files/foldertree/ftv2folderopen.gif
+2Script Index/files/foldertree/ftv2lastnode.gif
+2Script Index/files/foldertree/ftv2link.gif
+2Script Index/files/foldertree/ftv2mlastnode.gif
+2Script Index/files/foldertree/ftv2mnode.gif
+2Script Index/files/foldertree/ftv2node.gif
+2Script Index/files/foldertree/ftv2plastnode.gif
+2Script Index/files/foldertree/ftv2pnode.gif
+2Script Index/files/foldertree/ftv2vertline.gif
+@path=foldertree_files/

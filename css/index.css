@@ -1,0 +1,29 @@
+.info-box {
+	width:300px;
+	background-color:#ecf3fd;
+	border:1px solid #aaccee;
+	height:120px;
+	margin-bottom:10px;
+} 
+.info-box img {
+	float:left;
+	margin:5px;
+}
+.info-box p {
+	margin:5px 0 0 72px;
+}
+.info-box h2 {
+	margin:5px 0 0 0;
+}
+.info-box br {
+	clear:none;
+}
+
+#twitter-box {
+	height:100px;
+}
+
+#sidebar {
+	width:305px;
+	float:right;
+}

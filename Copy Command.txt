@@ -1,0 +1,1 @@
+rsync -ravzhe ssh --progress /mnt/x/Data/www/Sites/binnyva/binnyva.com/ binnyva@binnyva.com:/home/binnyva/public_html

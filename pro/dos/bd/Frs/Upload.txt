@@ -1,0 +1,47 @@
+This example references the SCP client included with OpenSSH, 'scp'. PuTTY users will instead reference 'PSCP.EXE', the SCP client included in the PuTTY suite. SCP clients also support numerous command-line options which allow you to specify that you want to transfer multiple files, the amount of progress information to show, and what metadata should be preserved by the transfer; see the documentation provided with your SSH client for additional details.
+
+All commands are executed from a command prompt on your workstation.
+
+$ scp SOURCE_PATH DESTINATION_PATH
+
+SOURCE_PATH is defined as:
+
+When transferring files to a SourceForge.net host, the SOURCE_PATH will be a filename on your local workstation. 
+When transferring files from a SourceForge.net host, the SOURCE_PATH will the username, host, and path to the file on the remote server. 
+DESTINATION_PATH is defined as:
+
+When transferring files from a SourceForge.net host, this will be a path on your local workstation, such as: . (which specifies your current directory) 
+When transferring files to a SourceForge.net host, this will the username, host, and path to the file on the remote server. 
+Examples of SOURCE_PATH or DESTINATION_PATH on remote servers:
+
+SOURCE_PATH or DESTINATION_PATH may be a specific file:
+USERNAME@shell.sourceforge.net:/home/users/U/US/USERNAME/filename
+USERNAME@cf-shell.sourceforge.net:/home/users/U/US/USERNAME/filename
+
+DESTINATION_PATH may instead be a specific directory, or your home
+directory (as shown in these examples):
+USERNAME@shell.sourceforge.net:
+USERNAME@cf-shell.sourceforge.net:
+
+Recursive (whole directory structure) copies are possible using
+command-line options and specifying a directory as the SOURCE_PATH.
+
+WinSCP is a graphical SCP and SFTP client for Microsoft Windows users. WinSCP, PuTTY and OpenSSH are directly supported by SourceForge.net.
+
+-------------------------------------------------------------------------------------------
+
+When WinSCP starts, a dialog box is opened that requests various host information. Enter the following details in to the provided dialog box:
+
+Host name: shell.sourceforge.net or cf-shell.sourceforge.net 
+Port number: 22 
+User name: USERNAME 
+Password: leave this field blank 
+Private key file: Click on the '...' button. Browse to the location where you stored the PuTTY private key you created previously for the host you are trying to access. Load the desired key. 
+Protocol: SFTP (allow SCP fallback) 
+Next, click on the 'Save...' button; enter a session name which matches the hostname you entered previously (USERNAME@shell.sourceforge.net or USERNAME@cf-shell.sourceforge.net).
+
+To initiate the connection, click on the 'Login' button. Compare the SSH host key fingerprint against the fingerprints published in our Site Documentation, if prompted; respond 'Yes' if the key matches or 'No' if the key does not match. If you encounter a non-matching key, please contact SourceForge.net staff by submitting a Support Request.
+
+After WinSCP establishes a connection to the host, the WinSCP interface will appear. The window pane on the left represents files on your local workstation. The window pane on the right represents files on the remote host (shell.sourceforge.net or cf-shell.sourceforge.net).
+
+

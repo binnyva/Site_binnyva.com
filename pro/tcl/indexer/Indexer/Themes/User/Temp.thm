@@ -1,0 +1,34 @@
+@name=Temp
+@section=User
+@desc=This is a tmeporary
+
+@start_code=<HTML><HEAD>
+<TITLE>%Title%</TITLE>
+<STYLE>
+<!--
+A { COLOR:blue; TEXT-DECORATION:none; }
+A:hover { COLOR:red;}
+// -->
+</STYLE>
+</HEAD>
+<BODY>
+<H1 ALIGN="CENTER">%Title%</H1>
+
+@link_code=
+@struct_in_code=%Level_Code%
+@struct_out_code=
+</ul></li>
+@level_1_code=<li><a href="javascript:open_dir('%Full_Folder_Path%');">%Folder_Name%</a><br>
+@level_2_code=	<li><a href="javascript:open_dir('%Full_Folder_Path%');">%Folder_Name%</a><br>
+@level_3_code=		<li><a href="javascript:open_dir('%Full_Folder_Path%');">%Folder_Name%</a><br>
+@level_4_code=			<li><a href="javascript:open_dir('%Full_Folder_Path%');">%Folder_Name%</a><br>
+@insert_folder=
+@insert_folder_n=
+@insert_file=
+@insert_file_n=
+@insert_letter=
+@end_code=
+</BODY></HTML>
+@files=
+@path=
+@filters=

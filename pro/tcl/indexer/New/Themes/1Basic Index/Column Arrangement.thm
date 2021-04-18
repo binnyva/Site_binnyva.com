@@ -1,0 +1,36 @@
+@name=Column Arrangement
+@section=Basic Index
+@desc=Column wise arrangemet of all the links. All the links will be put in 3(Changable) columns.
+@start_code=<HTML><HEAD>
+<TITLE>%Title%</TITLE>
+<STYLE>
+<!--
+A { COLOR:blue; TEXT-DECORATION:none; }
+A:hover { COLOR:red;}
+ // -->
+</STYLE>
+</HEAD>
+<BODY>
+<H1 ALIGN="center">%Title%</H1>
+
+<table width="100%"><tr>
+
+@link_code=<td width="33%"><A HREF="%LINK%">%FILE_NAME%</A></td>
+@struct_in_code=</tr></table>
+
+<table width="100%"><tr><td colspan=3>%level_code%</td></tr>
+<tr>
+@struct_out_code=
+
+@level_1_code=<H3>%Folder_Name%</H3>
+@level_2_code=<H4>%Folder_Name%</H4>
+@level_3_code=<B>%Folder_Name%</B><BR>
+@level_4_code=<I>%Folder_Name%</I><BR>
+@insert_folder=
+@insert_folder_n=
+@insert_file=</tr>
+<tr>
+@insert_file_n=3
+@insert_letter=
+@end_code=</tr></table>
+</BODY></HTML>

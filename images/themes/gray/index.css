@@ -1,0 +1,8 @@
+/*<style>*/
+.hs{background-color:#888; text-align:center; font-family:verdana; font-size:12; font-weight:bold; }
+.ln{Background-Color:#ccc; display:block; color:#000; font-family:verdana; font-size:12; WIDTH:138px;}
+.ln:hover{Background-Color:#aaa; color:#FFF;}
+.dots{position:relative; font-family:courier new, courier, mono; font-size:12; color:#000;}
+.light4 { top:-2; left:-2; color:yellow; POSITION: absolute; }
+.shade4 { top:+2; left:+2; color:yellow; POSITION: absolute; }
+.fill4 { top:0; left:0; color:darkgreen; POSITION: absolute; }

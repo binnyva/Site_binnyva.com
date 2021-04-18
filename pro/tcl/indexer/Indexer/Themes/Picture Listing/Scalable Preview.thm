@@ -1,0 +1,57 @@
+@name=Scalable Preview
+@section=Picture Listing
+@desc=This will display the preview of all the selected files. It can scale the larger pictures to a more managable size if the user choses so.
+
+@start_code=<html><head>
+<title>%Title%</title>
+</head>
+<STYLE> 
+BODY,P,TD { font: 8pt Verdana, Arial, Helvetica, Sans-serif; line-height:10pt }
+A{COLOR:"Blue";TEXT-DECORATION: none;}
+A:hover{Font-Weight: bold;COLOR:"Red";}
+</STYLE>
+<SCRIPT language=javascript defer>
+function scaleImages() {
+var colTemp = this.document.all.tags("IMG");
+ if (f1.check.checked) {
+  for (iImgCnt = 0; iImgCnt < colTemp.length; iImgCnt++) {
+    if (colTemp(iImgCnt).OLDWIDTH != null) colTemp(iImgCnt).width = colTemp(iImgCnt).OLDWIDTH;
+    if (colTemp(iImgCnt).OLDHEIGHT != null) colTemp(iImgCnt).height = colTemp(iImgCnt).OLDHEIGHT;
+   } //for(iImgCnt = 0;..
+  } //if (this.event.srcElement.checked)
+else {
+  for (iImgCnt = 0; iImgCnt < colTemp.length; iImgCnt++) {
+    if (colTemp(iImgCnt).complete) {
+      colTemp(iImgCnt).OLDWIDTH = colTemp(iImgCnt).width;
+      colTemp(iImgCnt).OLDHEIGHT = colTemp(iImgCnt).height;
+      if (colTemp(iImgCnt).width > 100) colTemp(iImgCnt).width = 100;
+      if (colTemp(iImgCnt).height > 100) colTemp(iImgCnt).height = 100;
+      } // if (colTemp(iImgCnt).complete)
+    } // for (iImgCnt = 0 ...
+  } //else
+}
+</SCRIPT>
+
+<BODY onload="scaleImages()">
+<center><H1>%Title%</H1>
+
+<TABLE cols=5 border=1 bordercolor=cadetblue cellspacing=0 cellpadding=5 frame=void rules=rows>
+<TR><FORM id="f1"><TD valign=bottom><B>Image Name</B></TD>
+<TD valign=bottom><B>Image&nbsp;&nbsp;<INPUT TYPE=CHECKBOX id="check" onClick='scaleImages()'>Scale large images</B></TD></FORM></TR>
+@link_code=<TR><TD><A HREF="%Link%" target=_blank>%File_Name%</A></TD><TD><IMG src="%Link%"></TD></TR>
+@struct_in_code=
+<TR><TD colspan=2>%Level_code%</TD><TR>
+@struct_out_code=
+@level_1_code=<H3>%Folder_Name%</H3>
+@level_2_code=<H4>%Folder_Name%</H4>
+@level_3_code=<B>%Folder_Name%</B><BR>
+@level_4_code=<I>%Folder_Name%</I><BR>
+@insert_folder=
+@insert_folder_n=
+@insert_file=
+@insert_file_n=
+@insert_letter=
+@end_code=</table></center></body></html>
+@files=
+@path=
+@filters=*.jpg;*.jpe;*.gif;*.bmp;*.png;*.xcf

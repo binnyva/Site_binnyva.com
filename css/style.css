@@ -1,0 +1,164 @@
+body {
+	margin:5px;
+	background:#fff url(../images/silver_gradient.png) repeat-x;
+	color:#666;
+	font:76%/140% Verdana,Geneva,Arial,Helvetica,sans-serif;
+}
+a {
+	text-decoration:none;
+	color:blue;
+}
+br {
+	clear:both;
+}
+h1,h1 a {
+	margin-top:20px;
+	font:20px Georgia,Times,serif;
+	font-weight:bold;
+	color:#666;
+}
+
+/*Decrypt Email */
+.email-encrypt {
+	unicode-bidi:bidi-override;
+	direction: rtl;
+}
+.email-encrypt .email-decrypt-message {
+	display:none;
+}
+
+.feed-1 {
+	background-color:#c1e7ff;
+}
+.feed-2 {
+	background-color:#ffcdd5;
+}
+.feed-3 {
+	background-color:#f3ffda;
+}
+.feed-4 {
+	background-color:#eee;
+}
+.feed-5 {
+	background-color:#dbdaff;
+}
+.feed-6 {
+	background-color:#cfcfcf;
+}
+.feed-7 {
+	background-color:#deffa2;
+}
+.feed-8 {
+	background-color:#cfffe9;
+}
+.feed-9 {
+	background-color:#e4ecd1;
+}
+.feed-10 {
+	background-color:#eaade7;
+}
+.feed-11 {
+	background-color:#d6e0ff;
+}
+.feed-12 {
+	background-color:#bab1e2;
+}
+
+
+.form-area label {
+	width:100px;
+	display:block;
+	float:left;
+	text-align:right;
+	padding-right:5px;
+}
+.form-area input, .form-area select, .form-area textarea {
+	float:left;
+}
+.form-area p.info {
+	float:left;
+}
+br {
+	clear:both;
+}
+img {
+	border:0;
+}
+
+#loading {
+	position:fixed;
+	background-color:#f00;
+	top:0;
+	left:0;
+	color:#fff;
+	padding:2px 2px 2px 2px;
+	display:none;
+	z-index:9;
+	opacity:.6;
+	filter: alpha(opacity=60);
+}
+
+/* Table */
+table {
+	width:100%;
+	border-collapse:collapse;
+}
+th {
+	text-align:left;
+}
+table .odd {
+	background-color:#eee;
+}
+
+/*Lists*/
+ul.horizontal, ul.vertical {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+ul.horizontal li {
+	float:left;
+	padding:0;
+}
+
+/*Messages*/
+#warning-message,.warning {
+	color:orange;
+	font-weight:bold;
+}
+#error-message,.error, .error-message {
+	color:red;
+	font-weight:bold;
+}
+#success-message,.success, .success-message {
+	color:darkgreen;
+	font-weight:bold;
+}
+	
+#warning-message,.warning, #success-message,.success,#error-message,.error {
+	padding-left:18px;
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+
+
+/*Icons*/
+.icon,.page-next,.page-back,.page-first,.page-last,.page-previous {
+	font-size:0px;
+	padding:10px 8px;
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+.list-with-icon li,.list-with-icon dt, .with-icon {
+	padding:2px 0 2px 18px;
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+.menu-with-icon li a {
+	padding-left:12px;
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+.no-icon {
+	background-image:none !important;
+}

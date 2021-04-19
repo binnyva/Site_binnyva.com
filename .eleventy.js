@@ -32,6 +32,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("static");
+  eleventyConfig.addPassthroughCopy("insta");
 
   /* Markdown Overrides */
   // let markdownLibrary = markdownIt({

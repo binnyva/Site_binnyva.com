@@ -16,13 +16,13 @@ eleventyNavigation:
 
 See more details about my [current projects](now)...
 
-- Learning, building and teaching [Zettelkasten System](https://notes.binnyva.com/), [Digital Garden](https://github.com/binnyva/gatsby-garden) 📔
-- Creating [Standup Philosophy](https://standup-philosophy.netlify.app/) Content 🎤
+- Creating [MindOS](https://mindos.in/) 🧠
+- Learning, building and teaching [Zettelkasten System](https://binnyva.com/zettelkasten/), [Digital Garden](https://notes.binnyva.com/) 📔
 - Director of Technology at [Make A Difference](https://makeadiff.in/) 
 
 ## Socials
 
-I'm Binny V A practically everywhere - search and you shall find.
+I'm **@binnyva** practically everywhere - search and you shall find.
 
 - [<i class="fa fa-twitter"></i> Twitter](https://twitter.com/binnyva)
 - [<i class="fa fa-github"></i> GitHub](https://github.com/binnyva)

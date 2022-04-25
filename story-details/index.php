@@ -1,18 +1,21 @@
 <?php
-$url = 'https://binnyva.com';
-$url_file = 'link.txt';
+require 'common.php';
 
-// URL in the file is only valid if its lesser than one day old.
-$url_age = time() - filemtime($url_file);
+$url = 'https://binnyva.com/';
+$story_id = 0;
 
-if($url_age < (60 * 60 * 24)) {
-	$input_url = trim(file_get_contents($url_file));
-
-	// Check if URL is valid
-	$valid = filter_var($input_url, FILTER_VALIDATE_URL);
-
-	if($valid) $url = $input_url;
+$active_story = iapp('sql')->getAssoc("SELECT id,url FROM sd_story WHERE added_on >= NOW() - INTERVAL 1 DAY");
+if($active_story) {
+	$url = $active_story['url'];
+	$story_id = $active_story['id'];
 }
 
-// echo $url . "\n";
+// Tracking
+iapp('db')->insert('sd_story_visit', [
+	'story_id' => $story_id, 
+	'referrer' => i($_SERVER, 'HTTP_REFERER', null),
+	'added_on' => 'NOW()'
+]);
+
+echo $url . "\n";
 header("Location: $url");

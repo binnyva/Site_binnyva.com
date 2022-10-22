@@ -11,4 +11,4 @@
 - Build the site using `npx eleventy`
 - This will write all the content to the `_site` folder.
 - Deploy using this command...
-`rsync -ravzhe ssh --progress "/mnt/x/Data/www/Sites/binnyva/binnyva.com/_site/" binnyva.com@binnyva.com:/home/binnyva/public_html`
+`rsync -ravzhe ssh --progress "/mnt/x/Data/www/Sites/binnyva/binnyva.com/_site/" binnyva.com@binnyva.com:/home/binnyva.com/public_html`

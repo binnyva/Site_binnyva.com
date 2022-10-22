@@ -4,10 +4,14 @@ auto_deploy: false
 admin_path: _admin
 webhook_url: 
 sections:
+- type: directory
+  path: ''
+  label: Root
+  create: documents
+  match: "*.md"
 - type: document
   path: index.md
   label: Index
-  match: "**/*"
 upload_dir: static
 public_path: "/static"
 front_matter_path: ''
